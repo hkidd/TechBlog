@@ -15,12 +15,12 @@ router.get("/", async (req, res) => {
       ],
     });
 
-    const posts = dbPostsData.map((Posts) =>
+    const postData = dbPostsData.map((posts) =>
       posts.get({ plain: true })
     );
 
     res.render("homepage", {
-      posts,
+      postData,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -43,7 +43,7 @@ router.get("/Posts/:id", withAuth, async (req, res) => {
       ],
     });
     const Posts = dbPostsData.get({ plain: true });
-    res.render("Posts", { Posts, loggedIn: req.session.loggedIn });
+    res.render("posts", { Posts, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -59,7 +59,7 @@ router.get("/Comments/:id", withAuth, async (req, res) => {
 
       const Comments = dbCommentsData.get({ plain: true });
 
-      res.render("Comments", { Comments, loggedIn: req.session.loggedIn });
+      res.render("comments", { Comments, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
