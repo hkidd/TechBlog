@@ -1,3 +1,7 @@
-{{#each galleries as |gallery|}}
-{{> gallery-details}}
-{{/each}}
+<section class="container">
+  <section class="flex-row justify-center">
+    {{#each postData as |post|}}
+    {{> post-details}}
+    {{/each}}
+  </section>
+</section>
