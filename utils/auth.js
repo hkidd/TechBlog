@@ -5,7 +5,6 @@ const withAuth = (req, res, next) => {
   }else{
     next();
   }
-  // TODO: If the user is logged in, allow them to view the paintings
 };
 
 module.exports = withAuth;
