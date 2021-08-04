@@ -1,5 +1,5 @@
 # TechBlog
-This tech blog is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
+This tech blog is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.  Users are able to sign up, login, logout, and add posts to the page/database.
 
 ## User Story
 
